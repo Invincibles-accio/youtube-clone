@@ -7,11 +7,11 @@ const VideoList = ({videos, selectVideo}) => {
     return(
         <div className="video-list"> 
                 {
-                    videos.map(video => {
+                    videos.map((video, index) => {
                         return(
-                        <div onClick={()=>{selectVideo(video)}}>
+                        <div id={index} onClick={()=>{selectVideo(video)}}>
                              
-                               <img  src={video.snippet.thumbnails.default.url} alt="Youtube Videos"/>
+                               <img id={index} src={video.snippet.thumbnails.default.url} alt="Youtube Videos"/>
                         </div>
                         )
                     })

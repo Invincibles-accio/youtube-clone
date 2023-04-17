@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import youtube from '../apis/youtube';
+import 'bootstrap/dist/css/bootstrap.css';
+import { Button } from 'reactstrap';
 
 // AIzaSyAtGb453QpbquJuEbgJFOawT67G3l-GpZ8
 
@@ -32,7 +34,8 @@ const SearchBar = ({addContent,selectVideo}) => {
                  placeholder="Search"
                  onChange={(e) => setSearchTerm(e.target.value)}
               />
-            <button onClick={getVideos}> Search </button>
+            {/* <button onClick={getVideos}> Search </button> */}
+            <Button color="primary" onClick={getVideos}>Search</Button>
         </div>
     )
 }
